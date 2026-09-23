@@ -1,0 +1,129 @@
+dataset,classifier,metric,test,comparison,stat_name,stat_value,df,p_uncorrected,p_corrected,alpha_corrected,significant,delta_pp
+Original (Clear water),LinearSVM,OA,RM-ANOVA,All methods,F,43.207,"(4,96)",1.09011e-20,1.09011e-20,0.0500,yes,
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,USP vs SNV,t,4.622,24,0.000108513,0.00108513,0.0050,yes,3.83
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,USP vs SG1,t,9.991,24,5.00051e-10,5.00051e-09,0.0050,yes,11.92
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,USP vs EMSC,t,4.961,24,4.58712e-05,0.000458712,0.0050,yes,5.4
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,USP vs Detrend,t,10.477,24,1.96446e-10,1.96446e-09,0.0050,yes,11.63
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,SNV vs SG1,t,6.292,24,1.66983e-06,1.66983e-05,0.0050,yes,8.09
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,SNV vs EMSC,t,2.463,24,0.0213188,0.213188,0.0050,no,1.57
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,SNV vs Detrend,t,7.254,24,1.70627e-07,1.70627e-06,0.0050,yes,7.8
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,SG1 vs EMSC,t,-4.39,24,0.000196051,0.00196051,0.0050,yes,-6.52
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,SG1 vs Detrend,t,-0.268,24,0.790845,1,0.0050,no,-0.29
+Original (Clear water),LinearSVM,OA,Bonferroni posthoc,EMSC vs Detrend,t,5.821,24,5.30162e-06,5.30162e-05,0.0050,yes,6.23
+Original (Clear water),LinearSVM,OA,BandShift paired t,USP,t,1.44,24,0.162921,0.814603,0.0100,no,-0.42
+Original (Clear water),LinearSVM,OA,BandShift paired t,SNV,t,13.799,24,6.58283e-13,3.29142e-12,0.0100,yes,-24.38
+Original (Clear water),LinearSVM,OA,BandShift paired t,SG1,t,37.131,24,1.02279e-22,5.11393e-22,0.0100,yes,-60.0
+Original (Clear water),LinearSVM,OA,BandShift paired t,EMSC,t,12.202,24,8.84088e-12,4.42044e-11,0.0100,yes,-17.1
+Original (Clear water),LinearSVM,OA,BandShift paired t,Detrend,t,24.787,24,1.30747e-18,6.53735e-18,0.0100,yes,-51.41
+Original (Clear water),LinearSVM,macro_F1,RM-ANOVA,All methods,F,51.3958,"(4,96)",4.62772e-23,4.62772e-23,0.0500,yes,
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,USP vs SNV,t,3.969,24,0.000569389,0.00569389,0.0050,no,3.39
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,USP vs SG1,t,9.622,24,1.0375e-09,1.0375e-08,0.0050,yes,14.02
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,USP vs EMSC,t,4.16,24,0.000351432,0.00351432,0.0050,yes,4.4
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,USP vs Detrend,t,10.1,24,4.04909e-10,4.04909e-09,0.0050,yes,13.16
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,SNV vs SG1,t,7.162,24,2.11155e-07,2.11155e-06,0.0050,yes,10.62
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,SNV vs EMSC,t,1.393,24,0.176482,1,0.0050,no,1.01
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,SNV vs Detrend,t,8.222,24,1.93559e-08,1.93559e-07,0.0050,yes,9.77
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,SG1 vs EMSC,t,-5.977,24,3.60981e-06,3.60981e-05,0.0050,yes,-9.61
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,SG1 vs Detrend,t,-0.694,24,0.494183,1,0.0050,no,-0.86
+Original (Clear water),LinearSVM,macro_F1,Bonferroni posthoc,EMSC vs Detrend,t,7.812,24,4.79903e-08,4.79903e-07,0.0050,yes,8.76
+Original (Clear water),LinearSVM,macro_F1,BandShift paired t,USP,t,1.406,24,0.17255,0.862751,0.0100,no,-0.34
+Original (Clear water),LinearSVM,macro_F1,BandShift paired t,SNV,t,15.667,24,4.19136e-14,2.09568e-13,0.0100,yes,-35.53
+Original (Clear water),LinearSVM,macro_F1,BandShift paired t,SG1,t,42.585,24,3.99758e-24,1.99879e-23,0.0100,yes,-75.04
+Original (Clear water),LinearSVM,macro_F1,BandShift paired t,EMSC,t,10.873,24,9.35513e-11,4.67757e-10,0.0100,yes,-18.98
+Original (Clear water),LinearSVM,macro_F1,BandShift paired t,Detrend,t,33.168,24,1.46014e-21,7.30072e-21,0.0100,yes,-65.44
+Original (Clear water),RBF-SVM,OA,RM-ANOVA,All methods,F,45.2721,"(4,96)",2.59104e-21,2.59104e-21,0.0500,yes,
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,USP vs SNV,t,1.136,24,0.267107,1,0.0050,no,0.62
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,USP vs SG1,t,8.38,24,1.37361e-08,1.37361e-07,0.0050,yes,11.19
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,USP vs EMSC,t,3.26,24,0.00332046,0.0332046,0.0050,no,2.08
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,USP vs Detrend,t,7.697,24,6.21012e-08,6.21012e-07,0.0050,yes,9.75
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,SNV vs SG1,t,8.314,24,1.5866e-08,1.5866e-07,0.0050,yes,10.57
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,SNV vs EMSC,t,1.563,24,0.131127,1,0.0050,no,1.47
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,SNV vs Detrend,t,6.834,24,4.55676e-07,4.55676e-06,0.0050,yes,9.13
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,SG1 vs EMSC,t,-6.333,24,1.51296e-06,1.51296e-05,0.0050,yes,-9.11
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,SG1 vs Detrend,t,-2.34,24,0.027955,0.27955,0.0050,no,-1.44
+Original (Clear water),RBF-SVM,OA,Bonferroni posthoc,EMSC vs Detrend,t,5.904,24,4.31584e-06,4.31584e-05,0.0050,yes,7.67
+Original (Clear water),RBF-SVM,OA,BandShift paired t,USP,t,1.013,24,0.320956,1,0.0100,no,-0.21
+Original (Clear water),RBF-SVM,OA,BandShift paired t,SNV,t,66.094,24,1.14404e-28,5.7202e-28,0.0100,yes,-56.5
+Original (Clear water),RBF-SVM,OA,BandShift paired t,SG1,t,38.206,24,5.21058e-23,2.60529e-22,0.0100,yes,-65.4
+Original (Clear water),RBF-SVM,OA,BandShift paired t,EMSC,t,11.145,24,5.68502e-11,2.84251e-10,0.0100,yes,-21.84
+Original (Clear water),RBF-SVM,OA,BandShift paired t,Detrend,t,31.235,24,5.97959e-21,2.9898e-20,0.0100,yes,-49.84
+Original (Clear water),RBF-SVM,macro_F1,RM-ANOVA,All methods,F,44.3756,"(4,96)",4.80938e-21,4.80938e-21,0.0500,yes,
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,USP vs SNV,t,-0.382,24,0.705529,1,0.0050,no,-0.19
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,USP vs SG1,t,7.931,24,3.67963e-08,3.67963e-07,0.0050,yes,11.71
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,USP vs EMSC,t,2.167,24,0.0403999,0.403999,0.0050,no,1.67
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,USP vs Detrend,t,7.239,24,1.76516e-07,1.76516e-06,0.0050,yes,11.96
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,SNV vs SG1,t,8.359,24,1.44001e-08,1.44001e-07,0.0050,yes,11.9
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,SNV vs EMSC,t,1.984,24,0.0588369,0.588369,0.0050,no,1.86
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,SNV vs Detrend,t,7.025,24,2.90479e-07,2.90479e-06,0.0050,yes,12.15
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,SG1 vs EMSC,t,-6.566,24,8.61692e-07,8.61692e-06,0.0050,yes,-10.05
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,SG1 vs Detrend,t,0.293,24,0.771988,1,0.0050,no,0.25
+Original (Clear water),RBF-SVM,macro_F1,Bonferroni posthoc,EMSC vs Detrend,t,6.02,24,3.24462e-06,3.24462e-05,0.0050,yes,10.3
+Original (Clear water),RBF-SVM,macro_F1,BandShift paired t,USP,t,0.23,24,0.820131,1,0.0100,no,-0.06
+Original (Clear water),RBF-SVM,macro_F1,BandShift paired t,SNV,t,73.029,24,1.05556e-29,5.27779e-29,0.0100,yes,-72.03
+Original (Clear water),RBF-SVM,macro_F1,BandShift paired t,SG1,t,43.725,24,2.13708e-24,1.06854e-23,0.0100,yes,-73.33
+Original (Clear water),RBF-SVM,macro_F1,BandShift paired t,EMSC,t,17.343,24,4.42549e-15,2.21275e-14,0.0100,yes,-33.01
+Original (Clear water),RBF-SVM,macro_F1,BandShift paired t,Detrend,t,31.391,24,5.32167e-21,2.66084e-20,0.0100,yes,-60.36
+Generalization (Pooled),LinearSVM,OA,RM-ANOVA,All methods,F,2.3688,"(4,96)",0.0579473,0.0579473,0.0500,no,
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,USP vs SNV,t,1.12,24,0.27389,1,0.0050,no,1.62
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,USP vs SG1,t,-0.389,24,0.700969,1,0.0050,no,-0.53
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,USP vs EMSC,t,2.124,24,0.0441786,0.441786,0.0050,no,2.7
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,USP vs Detrend,t,-0.066,24,0.948192,1,0.0050,no,-0.09
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,SNV vs SG1,t,-2.09,24,0.0473918,0.473918,0.0050,no,-2.15
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,SNV vs EMSC,t,0.875,24,0.390008,1,0.0050,no,1.07
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,SNV vs Detrend,t,-1.532,24,0.138623,1,0.0050,no,-1.72
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,SG1 vs EMSC,t,2.36,24,0.0267597,0.267597,0.0050,no,3.23
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,SG1 vs Detrend,t,0.482,24,0.634332,1,0.0050,no,0.43
+Generalization (Pooled),LinearSVM,OA,Bonferroni posthoc,EMSC vs Detrend,t,-2.208,24,0.0370348,0.370348,0.0050,no,-2.79
+Generalization (Pooled),LinearSVM,OA,BandShift paired t,USP,t,1.552,24,0.133649,0.668247,0.0100,no,-1.43
+Generalization (Pooled),LinearSVM,OA,BandShift paired t,SNV,t,7.029,24,2.87667e-07,1.43834e-06,0.0100,yes,-5.4
+Generalization (Pooled),LinearSVM,OA,BandShift paired t,SG1,t,18.249,24,1.41635e-15,7.08177e-15,0.0100,yes,-33.86
+Generalization (Pooled),LinearSVM,OA,BandShift paired t,EMSC,t,7.171,24,2.06706e-07,1.03353e-06,0.0100,yes,-7.58
+Generalization (Pooled),LinearSVM,OA,BandShift paired t,Detrend,t,6.044,24,3.06064e-06,1.53032e-05,0.0100,yes,-8.37
+Generalization (Pooled),LinearSVM,macro_F1,RM-ANOVA,All methods,F,2.2254,"(4,96)",0.0719045,0.0719045,0.0500,no,
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,USP vs SNV,t,1.248,24,0.224036,1,0.0050,no,1.81
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,USP vs SG1,t,-0.216,24,0.830823,1,0.0050,no,-0.31
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,USP vs EMSC,t,2.294,24,0.0308704,0.308704,0.0050,no,2.81
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,USP vs Detrend,t,0.1,24,0.92148,1,0.0050,no,0.15
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,SNV vs SG1,t,-1.979,24,0.0594421,0.594421,0.0050,no,-2.12
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,SNV vs EMSC,t,0.789,24,0.437999,1,0.0050,no,1.0
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,SNV vs Detrend,t,-1.431,24,0.165362,1,0.0050,no,-1.66
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,SG1 vs EMSC,t,2.161,24,0.0408758,0.408758,0.0050,no,3.12
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,SG1 vs Detrend,t,0.526,24,0.603861,1,0.0050,no,0.46
+Generalization (Pooled),LinearSVM,macro_F1,Bonferroni posthoc,EMSC vs Detrend,t,-2.077,24,0.0486434,0.486434,0.0050,no,-2.66
+Generalization (Pooled),LinearSVM,macro_F1,BandShift paired t,USP,t,2.005,24,0.0563696,0.281848,0.0100,no,-1.72
+Generalization (Pooled),LinearSVM,macro_F1,BandShift paired t,SNV,t,6.725,24,5.90221e-07,2.9511e-06,0.0100,yes,-5.12
+Generalization (Pooled),LinearSVM,macro_F1,BandShift paired t,SG1,t,20.537,24,9.80591e-17,4.90295e-16,0.0100,yes,-37.31
+Generalization (Pooled),LinearSVM,macro_F1,BandShift paired t,EMSC,t,6.956,24,3.41848e-07,1.70924e-06,0.0100,yes,-8.23
+Generalization (Pooled),LinearSVM,macro_F1,BandShift paired t,Detrend,t,5.875,24,4.63925e-06,2.31963e-05,0.0100,yes,-8.56
+Generalization (Pooled),RBF-SVM,OA,RM-ANOVA,All methods,F,26.7574,"(4,96)",6.40036e-15,6.40036e-15,0.0500,yes,
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,USP vs SNV,t,-8.522,24,1.01337e-08,1.01337e-07,0.0050,yes,-9.09
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,USP vs SG1,t,-6.95,24,3.46526e-07,3.46526e-06,0.0050,yes,-7.82
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,USP vs EMSC,t,-3.392,24,0.00240592,0.0240592,0.0050,no,-3.77
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,USP vs Detrend,t,-6.503,24,1.00351e-06,1.00351e-05,0.0050,yes,-7.0
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,SNV vs SG1,t,1.245,24,0.225044,1,0.0050,no,1.27
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,SNV vs EMSC,t,5.63,24,8.52619e-06,8.52619e-05,0.0050,yes,5.32
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,SNV vs Detrend,t,2.37,24,0.0261845,0.261845,0.0050,no,2.09
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,SG1 vs EMSC,t,4.125,24,0.000384311,0.00384311,0.0050,yes,4.05
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,SG1 vs Detrend,t,1.104,24,0.280474,1,0.0050,no,0.82
+Generalization (Pooled),RBF-SVM,OA,Bonferroni posthoc,EMSC vs Detrend,t,-3.199,24,0.00385244,0.0385244,0.0050,no,-3.23
+Generalization (Pooled),RBF-SVM,OA,BandShift paired t,USP,t,2.309,24,0.0298446,0.149223,0.0100,no,-0.72
+Generalization (Pooled),RBF-SVM,OA,BandShift paired t,SNV,t,3.59,24,0.0014728,0.007364,0.0100,yes,-2.36
+Generalization (Pooled),RBF-SVM,OA,BandShift paired t,SG1,t,13.158,24,1.81367e-12,9.06834e-12,0.0100,yes,-28.27
+Generalization (Pooled),RBF-SVM,OA,BandShift paired t,EMSC,t,4.926,24,5.01236e-05,0.000250618,0.0100,yes,-4.6
+Generalization (Pooled),RBF-SVM,OA,BandShift paired t,Detrend,t,5.561,24,1.01321e-05,5.06603e-05,0.0100,yes,-4.95
+Generalization (Pooled),RBF-SVM,macro_F1,RM-ANOVA,All methods,F,26.12,"(4,96)",1.16105e-14,1.16105e-14,0.0500,yes,
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,USP vs SNV,t,-8.687,24,7.1282e-09,7.1282e-08,0.0050,yes,-9.26
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,USP vs SG1,t,-7.807,24,4.85037e-08,4.85037e-07,0.0050,yes,-8.15
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,USP vs EMSC,t,-3.929,24,0.000630393,0.00630393,0.0050,no,-4.66
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,USP vs Detrend,t,-6.265,24,1.78274e-06,1.78274e-05,0.0050,yes,-6.83
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,SNV vs SG1,t,1.119,24,0.274271,1,0.0050,no,1.11
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,SNV vs EMSC,t,4.827,24,6.44016e-05,0.000644016,0.0050,yes,4.6
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,SNV vs Detrend,t,2.633,24,0.014567,0.14567,0.0050,no,2.43
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,SG1 vs EMSC,t,3.593,24,0.00146455,0.0146455,0.0050,no,3.49
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,SG1 vs Detrend,t,1.707,24,0.100724,1,0.0050,no,1.32
+Generalization (Pooled),RBF-SVM,macro_F1,Bonferroni posthoc,EMSC vs Detrend,t,-2.035,24,0.0530255,0.530255,0.0050,no,-2.17
+Generalization (Pooled),RBF-SVM,macro_F1,BandShift paired t,USP,t,2.124,24,0.0441968,0.220984,0.0100,no,-0.71
+Generalization (Pooled),RBF-SVM,macro_F1,BandShift paired t,SNV,t,3.471,24,0.00197931,0.00989653,0.0100,yes,-2.45
+Generalization (Pooled),RBF-SVM,macro_F1,BandShift paired t,SG1,t,13.974,24,5.02729e-13,2.51365e-12,0.0100,yes,-31.7
+Generalization (Pooled),RBF-SVM,macro_F1,BandShift paired t,EMSC,t,4.657,24,9.93078e-05,0.000496539,0.0100,yes,-4.85
+Generalization (Pooled),RBF-SVM,macro_F1,BandShift paired t,Detrend,t,5.331,24,1.80302e-05,9.01512e-05,0.0100,yes,-5.17

@@ -1,0 +1,6 @@
+method,fit_total_ms,fit_ms_per_train_sample,infer_us_per_sample_full,infer_us_per_sample_model,n_sv_total,svm_flops_primal,svm_flops_dual
+USP,6.1167,0.0397,1.5154,1.5465,56,600,11200
+SNV,5.5871,0.0363,6.3064,2.4505,74,600,14800
+SG1,5.5262,0.0359,10.6383,2.6272,85,600,17000
+EMSC,6.1298,0.0398,45.0879,3.0878,73,600,14600
+Detrend,6.0153,0.0391,38.3955,3.1960,75,600,15000

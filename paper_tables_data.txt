@@ -1,0 +1,315 @@
+================================================================================
+论文表格数据汇总（5 张表）
+================================================================================
+生成日期: 2026-07-24
+用途: 供 AI LaTeX 助手编排表格
+通用设置:
+  - 分类器: LinearSVM=SVC(kernel='linear',C=1.0,class_weight='balanced')
+             RBF-SVM=SVC(kernel='rbf',C=1.0,gamma='scale',class_weight='balanced')
+             RandomForest(n_estimators=500,class_weight='balanced_subsample',random_state=42)
+  - 评估: 25× stratified 4:1 splits (seed 42..66), 报告 mean ± std
+  - USP 维度: TruncatedSVD n_components=20
+  - BandShift: np.roll(X, shift=2, axis=1) 仅施加于测试集
+  - OA=Overall Accuracy, F1=macro-F1, Kappa=Cohen's Kappa
+
+================================================================================
+表 1: 塑料数据集 — 基线对比 + BandShift（主表，reviewer 核心要求）
+================================================================================
+源文件: results_baselines_full.csv
+说明: 5 方法(USP/SNV/SG1/EMSC/Detrend) × 3 分类器 × 3 水域(Clear/Turbid/Foamy)
+      BandShift 仅在 Clear 上测试（足够展示鲁棒性差异）
+数据格式: condition, method, classifier, OA_mean, OA_std, F1_mean, F1_std, k_mean, k_std
+
+--- Clear (Normal) ---
+Clear, USP,      svm,     0.9579, 0.0313, 0.9518, 0.0396, 0.9476, 0.0389
+Clear, USP,      rbf_svm, 0.9313, 0.0390, 0.9286, 0.0532, 0.9144, 0.0483
+Clear, USP,      rf,      0.9015, 0.0562, 0.8916, 0.0721, 0.8763, 0.0709
+Clear, SNV,      svm,     0.9241, 0.0395, 0.9260, 0.0462, 0.9059, 0.0484
+Clear, SNV,      rbf_svm, 0.9190, 0.0403, 0.9277, 0.0376, 0.8984, 0.0505
+Clear, SNV,      rf,      0.9087, 0.0534, 0.8979, 0.0623, 0.8852, 0.0674
+Clear, SG1,      svm,     0.8441, 0.0554, 0.8157, 0.0832, 0.8029, 0.0701
+Clear, SG1,      rbf_svm, 0.8246, 0.0613, 0.8084, 0.0812, 0.7777, 0.0786
+Clear, SG1,      rf,      0.8882, 0.0479, 0.8715, 0.0640, 0.8589, 0.0610
+Clear, EMSC,     svm,     0.9128, 0.0377, 0.9213, 0.0328, 0.8921, 0.0462
+Clear, EMSC,     rbf_svm, 0.9138, 0.0418, 0.9124, 0.0575, 0.8924, 0.0525
+Clear, EMSC,     rf,      0.9303, 0.0429, 0.9186, 0.0505, 0.9126, 0.0537
+Clear, Detrend,  svm,     0.8554, 0.0507, 0.8343, 0.0686, 0.8177, 0.0643
+Clear, Detrend,  rbf_svm, 0.8287, 0.0591, 0.8028, 0.0805, 0.7830, 0.0759
+Clear, Detrend,  rf,      0.9292, 0.0452, 0.9162, 0.0692, 0.9110, 0.0570
+
+--- Clear + BandShift ---
+Clear+BandShift, USP,      svm,     0.9559, 0.0335, 0.9498, 0.0410, 0.9450, 0.0416
+Clear+BandShift, USP,      rbf_svm, 0.9262, 0.0380, 0.9220, 0.0519, 0.9080, 0.0471
+Clear+BandShift, USP,      rf,      0.9026, 0.0578, 0.8953, 0.0680, 0.8782, 0.0722
+Clear+BandShift, SNV,      svm,     0.6738, 0.0753, 0.5549, 0.1087, 0.5990, 0.0906
+Clear+BandShift, SNV,      rbf_svm, 0.3744, 0.0462, 0.2154, 0.0609, 0.1429, 0.0701
+Clear+BandShift, SNV,      rf,      0.8503, 0.0622, 0.7991, 0.0914, 0.8107, 0.0787
+Clear+BandShift, SG1,      svm,     0.2636, 0.0704, 0.0930, 0.0541, 0.0064, 0.1176
+Clear+BandShift, SG1,      rbf_svm, 0.1918, 0.0356, 0.0985, 0.0272, 0.0599, 0.0361
+Clear+BandShift, SG1,      rf,      0.6226, 0.0742, 0.5141, 0.0707, 0.5219, 0.0912
+Clear+BandShift, EMSC,     svm,     0.7446, 0.0785, 0.7097, 0.1162, 0.6865, 0.0951
+Clear+BandShift, EMSC,     rbf_svm, 0.6759, 0.0976, 0.5630, 0.0950, 0.5790, 0.1320
+Clear+BandShift, EMSC,     rf,      0.8441, 0.0485, 0.7942, 0.0651, 0.8027, 0.0610
+Clear+BandShift, Detrend,  svm,     0.3179, 0.0725, 0.1500, 0.0661, 0.1074, 0.1213
+Clear+BandShift, Detrend,  rbf_svm, 0.3692, 0.0355, 0.2278, 0.0271, 0.2358, 0.0400
+Clear+BandShift, Detrend,  rf,      0.8677, 0.0375, 0.8087, 0.0703, 0.8331, 0.0481
+
+--- Turbid (Normal) ---
+Turbid, USP,      svm,     0.9710, 0.0134, 0.9734, 0.0131, 0.9647, 0.0163
+Turbid, USP,      rbf_svm, 0.9594, 0.0219, 0.9615, 0.0203, 0.9506, 0.0266
+Turbid, USP,      rf,      0.9263, 0.0271, 0.9293, 0.0269, 0.9099, 0.0331
+Turbid, SNV,      svm,     0.9575, 0.0165, 0.9590, 0.0166, 0.9482, 0.0202
+Turbid, SNV,      rbf_svm, 0.9496, 0.0220, 0.9510, 0.0213, 0.9385, 0.0269
+Turbid, SNV,      rf,      0.9524, 0.0233, 0.9543, 0.0227, 0.9419, 0.0286
+Turbid, SG1,      svm,     0.9301, 0.0222, 0.9325, 0.0207, 0.9148, 0.0270
+Turbid, SG1,      rbf_svm, 0.9011, 0.0246, 0.9072, 0.0229, 0.8794, 0.0299
+Turbid, SG1,      rf,      0.9502, 0.0174, 0.9512, 0.0166, 0.9393, 0.0212
+Turbid, EMSC,     svm,     0.9622, 0.0140, 0.9618, 0.0157, 0.9539, 0.0171
+Turbid, EMSC,     rbf_svm, 0.9430, 0.0218, 0.9453, 0.0213, 0.9305, 0.0266
+Turbid, EMSC,     rf,      0.9455, 0.0193, 0.9461, 0.0209, 0.9334, 0.0236
+Turbid, Detrend,  svm,     0.9197, 0.0207, 0.9202, 0.0203, 0.9021, 0.0252
+Turbid, Detrend,  rbf_svm, 0.8973, 0.0284, 0.9049, 0.0252, 0.8748, 0.0347
+Turbid, Detrend,  rf,      0.9420, 0.0203, 0.9433, 0.0187, 0.9294, 0.0248
+
+--- Foamy (Normal) ---
+Foamy, USP,      svm,     0.9320, 0.0346, 0.9142, 0.0452, 0.9118, 0.0449
+Foamy, USP,      rbf_svm, 0.9096, 0.0421, 0.8873, 0.0652, 0.8820, 0.0555
+Foamy, USP,      rf,      0.8880, 0.0404, 0.8536, 0.0610, 0.8534, 0.0531
+Foamy, SNV,      svm,     0.8680, 0.0476, 0.8285, 0.0633, 0.8307, 0.0608
+Foamy, SNV,      rbf_svm, 0.8888, 0.0451, 0.8578, 0.0668, 0.8543, 0.0599
+Foamy, SNV,      rf,      0.8952, 0.0421, 0.8722, 0.0574, 0.8630, 0.0557
+Foamy, SG1,      svm,     0.8440, 0.0379, 0.7748, 0.0685, 0.7990, 0.0484
+Foamy, SG1,      rbf_svm, 0.8600, 0.0473, 0.7902, 0.0693, 0.8168, 0.0622
+Foamy, SG1,      rf,      0.9144, 0.0319, 0.8736, 0.0654, 0.8880, 0.0423
+Foamy, EMSC,     svm,     0.8768, 0.0415, 0.8451, 0.0476, 0.8417, 0.0534
+Foamy, EMSC,     rbf_svm, 0.8960, 0.0408, 0.8849, 0.0554, 0.8636, 0.0541
+Foamy, EMSC,     rf,      0.8960, 0.0428, 0.8747, 0.0480, 0.8644, 0.0562
+Foamy, Detrend,  svm,     0.8328, 0.0476, 0.7513, 0.0799, 0.7853, 0.0606
+Foamy, Detrend,  rbf_svm, 0.8336, 0.0435, 0.7545, 0.0752, 0.7832, 0.0573
+Foamy, Detrend,  rf,      0.9072, 0.0369, 0.8798, 0.0553, 0.8787, 0.0486
+
+>>> BandShift drop (Clear, LinearSVM):
+    USP:      95.79% → 95.59%  ΔOA = -0.20pp  (鲁棒)
+    SNV:      92.41% → 67.38%  ΔOA = -25.03pp (崩溃)
+    SG1:      84.41% → 26.36%  ΔOA = -58.05pp (崩溃)
+    EMSC:     91.28% → 74.46%  ΔOA = -16.82pp
+    Detrend:  85.54% → 31.79%  ΔOA = -53.75pp (崩溃)
+
+
+================================================================================
+表 2: 对数变换消融（回应 log transformation 问题）
+================================================================================
+源文件: results_log_preprocessing.csv
+说明: 3 方法(USP / log+USP / SNV-Pre) × 3 水域(Clear/Turbid/Foamy)
+      log+USP: X = np.log(X + eps) 后做 USP
+      其他设置同表 1
+数据格式: condition, method, OA_mean, OA_std, F1_mean, F1_std, kappa_mean, kappa_std
+
+Clear,  A (USP),         0.9508, 0.0304, 0.9418, 0.0410, 0.9385, 0.0380
+Clear,  A_log (log+USP), 0.9631, 0.0278, 0.9634, 0.0285, 0.9538, 0.0348
+Clear,  A2 (SNV-Pre),    0.9200, 0.0446, 0.9234, 0.0454, 0.9005, 0.0553
+Turbid, A (USP),         0.9735, 0.0132, 0.9757, 0.0129, 0.9678, 0.0161
+Turbid, A_log (log+USP), 0.9694, 0.0135, 0.9714, 0.0130, 0.9628, 0.0165
+Turbid, A2 (SNV-Pre),    0.9477, 0.0229, 0.9487, 0.0230, 0.9363, 0.0280
+Foamy,  A (USP),         0.9328, 0.0310, 0.9175, 0.0419, 0.9128, 0.0401
+Foamy,  A_log (log+USP), 0.9304, 0.0317, 0.9083, 0.0556, 0.9096, 0.0413
+Foamy,  A2 (SNV-Pre),    0.8536, 0.0525, 0.8110, 0.0670, 0.8124, 0.0668
+
+>>> 结论:
+    Clear:  log+USP 比 USP 提升 +1.23pp OA（纯 Mie 散射，对数压缩动态范围有效）
+    Turbid: log+USP 略降 -0.41pp（非纯 Mie，对数变换失效）
+    Foamy:  log+USP 略降 -0.24pp（同上）
+    → 默认不串联 log，仅在 Clear/纯水场景可选
+
+
+================================================================================
+表 3: 泛化数据集（228 samples, 6 polymers，跨域验证）
+================================================================================
+源文件: results_generalization_full.csv
+说明: Phase 1 (Pooled 228样本) + Phase 2 (按水质 6 个子集) + Phase 3 (跨水域 hold-out)
+      5 方法 × 3 分类器
+数据格式: phase, condition, method, classifier, OA_mean, OA_std, F1_mean, F1_std, k_mean, k_std
+
+--- Phase 1: Pooled (Normal) ---
+1, Pooled, USP,      svm,     0.7333, 0.0559, 0.7361, 0.0557, 0.6797, 0.0673
+1, Pooled, USP,      rbf_svm, 0.6009, 0.0823, 0.6021, 0.0863, 0.5210, 0.0984
+1, Pooled, USP,      rf,      0.7253, 0.0785, 0.7239, 0.0806, 0.6702, 0.0942
+1, Pooled, SNV,      svm,     0.7084, 0.0689, 0.7091, 0.0684, 0.6500, 0.0828
+1, Pooled, SNV,      rbf_svm, 0.6836, 0.0709, 0.6834, 0.0753, 0.6202, 0.0846
+1, Pooled, SNV,      rf,      0.7680, 0.0642, 0.7644, 0.0676, 0.7214, 0.0770
+1, Pooled, SG1,      svm,     0.7307, 0.0596, 0.7301, 0.0596, 0.6765, 0.0716
+1, Pooled, SG1,      rbf_svm, 0.6711, 0.0804, 0.6740, 0.0819, 0.6050, 0.0964
+1, Pooled, SG1,      rf,      0.7876, 0.0533, 0.7855, 0.0552, 0.7449, 0.0640
+1, Pooled, EMSC,     svm,     0.6924, 0.0562, 0.6969, 0.0537, 0.6307, 0.0676
+1, Pooled, EMSC,     rbf_svm, 0.6231, 0.0795, 0.6328, 0.0767, 0.5475, 0.0950
+1, Pooled, EMSC,     rf,      0.7493, 0.0710, 0.7457, 0.0735, 0.6991, 0.0852
+1, Pooled, Detrend,  svm,     0.7289, 0.0570, 0.7288, 0.0591, 0.6744, 0.0686
+1, Pooled, Detrend,  rbf_svm, 0.6756, 0.0737, 0.6755, 0.0762, 0.6103, 0.0884
+1, Pooled, Detrend,  rf,      0.7422, 0.0691, 0.7380, 0.0720, 0.6905, 0.0829
+
+--- Phase 1: Pooled + BandShift ---
+1, Pooled+BandShift, USP,      svm,     0.7111, 0.0711, 0.7142, 0.0721, 0.6529, 0.0855
+1, Pooled+BandShift, USP,      rbf_svm, 0.5938, 0.0741, 0.5952, 0.0773, 0.5124, 0.0886
+1, Pooled+BandShift, USP,      rf,      0.7182, 0.0848, 0.7166, 0.0865, 0.6618, 0.1017
+1, Pooled+BandShift, SNV,      svm,     0.6551, 0.0709, 0.6513, 0.0720, 0.5860, 0.0852
+1, Pooled+BandShift, SNV,      rbf_svm, 0.6453, 0.0779, 0.6441, 0.0781, 0.5741, 0.0929
+1, Pooled+BandShift, SNV,      rf,      0.7547, 0.0572, 0.7514, 0.0578, 0.7054, 0.0687
+1, Pooled+BandShift, SG1,      svm,     0.4027, 0.0827, 0.3603, 0.0919, 0.2833, 0.1000
+1, Pooled+BandShift, SG1,      rbf_svm, 0.3956, 0.0691, 0.3575, 0.0847, 0.2724, 0.0829
+1, Pooled+BandShift, SG1,      rf,      0.6338, 0.0720, 0.6278, 0.0763, 0.5603, 0.0864
+1, Pooled+BandShift, EMSC,     svm,     0.6338, 0.0718, 0.6351, 0.0739, 0.5600, 0.0865
+1, Pooled+BandShift, EMSC,     rbf_svm, 0.6044, 0.0900, 0.6108, 0.0946, 0.5247, 0.1082
+1, Pooled+BandShift, EMSC,     rf,      0.7084, 0.0686, 0.7072, 0.0709, 0.6499, 0.0822
+1, Pooled+BandShift, Detrend,  svm,     0.6542, 0.0694, 0.6541, 0.0706, 0.5851, 0.0830
+1, Pooled+BandShift, Detrend,  rbf_svm, 0.6124, 0.0827, 0.6111, 0.0816, 0.5346, 0.0989
+1, Pooled+BandShift, Detrend,  rf,      0.7280, 0.0830, 0.7272, 0.0846, 0.6734, 0.0994
+
+>>> Phase 1 BandShift drop (LinearSVM):
+    USP:     73.33% → 71.11%  ΔOA = -2.22pp  (鲁棒)
+    SNV:     70.84% → 65.51%  ΔOA = -5.33pp
+    SG1:     73.07% → 40.27%  ΔOA = -32.80pp (崩溃)
+    EMSC:    69.24% → 63.38%  ΔOA = -5.86pp
+    Detrend: 72.89% → 65.42%  ΔOA = -7.47pp
+
+--- Phase 2: Per-condition (Normal only, LinearSVM 简表) ---
+2, DIW, USP,      svm, 0.7333, 0.1322  | 2, DIW, SNV,      svm, 0.5111, 0.1925
+2, DIW, SG1,      svm, 0.6089, 0.1760  | 2, DIW, EMSC,     svm, 0.4622, 0.2350
+2, DIW, Detrend,  svm, 0.5511, 0.1416
+2, TG,  USP,      svm, 0.8089, 0.1343  | 2, TG,  SNV,      svm, 0.7778, 0.1434
+2, TG,  SG1,      svm, 0.7733, 0.1487  | 2, TG,  EMSC,     svm, 0.7644, 0.1446
+2, TG,  Detrend,  svm, 0.7778, 0.1604
+2, C,   USP,      svm, 0.7556, 0.1571  | 2, C,   SNV,      svm, 0.7689, 0.1358
+2, C,   SG1,      svm, 0.7422, 0.1460  | 2, C,   EMSC,     svm, 0.7778, 0.1434
+2, C,   Detrend,  svm, 0.7333, 0.1504
+2, Bu5, USP,      svm, 0.6711, 0.1341  | 2, Bu5, SNV,      svm, 0.7689, 0.1153
+2, Bu5, SG1,      svm, 0.7244, 0.1365  | 2, Bu5, EMSC,     svm, 0.6711, 0.1178
+2, Bu5, Detrend,  svm, 0.6933, 0.1254
+2, V,   USP,      svm, 0.4444, 0.1200  | 2, V,   SNV,      svm, 0.4578, 0.1614
+2, V,   SG1,      svm, 0.4711, 0.1480  | 2, V,   EMSC,     svm, 0.4444, 0.1786
+2, V,   Detrend,  svm, 0.4133, 0.1488
+2, W6,  USP,      svm, 0.7956, 0.1096  | 2, W6,  SNV,      svm, 0.8533, 0.0767
+2, W6,  SG1,      svm, 0.8800, 0.0903  | 2, W6,  EMSC,     svm, 0.8133, 0.0891
+2, W6,  Detrend,  svm, 0.8578, 0.0990
+
+--- Phase 3: Cross-condition hold-out (LinearSVM 简表) ---
+3, hold-out DIW, USP,      svm, 0.5000  | 3, hold-out DIW, SNV,      svm, 0.3611
+3, hold-out DIW, SG1,      svm, 0.4722  | 3, hold-out DIW, EMSC,     svm, 0.3889
+3, hold-out DIW, Detrend,  svm, 0.3611
+3, hold-out TG,  USP,      svm, 0.6944  | 3, hold-out TG,  SNV,      svm, 0.6944
+3, hold-out TG,  SG1,      svm, 0.5000  | 3, hold-out TG,  EMSC,     svm, 0.6944
+3, hold-out TG,  Detrend,  svm, 0.5278
+3, hold-out W6,  USP,      svm, 0.6944  | 3, hold-out W6,  SNV,      svm, 0.6944
+3, hold-out W6,  SG1,      svm, 0.6389  | 3, hold-out W6,  EMSC,     svm, 0.5833
+3, hold-out W6,  Detrend,  svm, 0.5556
+
+
+================================================================================
+表 4: Textile BandShift（跨域鲁棒性验证，最新结果）
+================================================================================
+源文件: results_textile_bandshift_full.csv
+说明: 57 samples, 3 类纤维 (Cotton 17 / Polyester 36 / Lyocell-Modacrylic 4)
+      122 bands (1004-1678 nm)
+      5 方法 × 3 分类器 × 25 重复 4:1 分层划分
+      (用 4:1 而非 LOO-CV：BandShift 需要足够测试样本做统计)
+数据格式: condition, method, classifier, OA_mean, OA_std, F1_mean, F1_std, k_mean, k_std
+
+--- Normal ---
+Normal, USP,      svm,     0.8300, 0.0779, 0.7671, 0.1508, 0.6631, 0.1473
+Normal, USP,      rbf_svm, 0.8267, 0.0795, 0.7619, 0.1507, 0.6640, 0.1413
+Normal, USP,      rf,      0.7967, 0.1252, 0.6697, 0.2302, 0.5446, 0.2925
+Normal, SNV,      svm,     0.7500, 0.1128, 0.6655, 0.1569, 0.4979, 0.1993
+Normal, SNV,      rbf_svm, 0.6533, 0.1266, 0.4547, 0.1522, 0.3332, 0.2124
+Normal, SNV,      rf,      0.7567, 0.0865, 0.5204, 0.1656, 0.4021, 0.2407
+Normal, SG1,      svm,     0.7233, 0.1068, 0.6414, 0.1504, 0.4447, 0.1771
+Normal, SG1,      rbf_svm, 0.6133, 0.1099, 0.3970, 0.0782, 0.2700, 0.1892
+Normal, SG1,      rf,      0.8067, 0.0668, 0.5775, 0.1271, 0.5650, 0.1728
+Normal, EMSC,     svm,     0.7600, 0.1389, 0.6791, 0.1913, 0.5434, 0.2560
+Normal, EMSC,     rbf_svm, 0.7400, 0.1111, 0.5558, 0.2070, 0.3720, 0.2915
+Normal, EMSC,     rf,      0.8100, 0.0780, 0.5978, 0.1569, 0.5590, 0.1847
+Normal, Detrend,  svm,     0.7567, 0.1046, 0.6334, 0.1598, 0.5032, 0.1902
+Normal, Detrend,  rbf_svm, 0.6833, 0.1250, 0.4479, 0.0917, 0.3978, 0.2185
+Normal, Detrend,  rf,      0.8233, 0.0651, 0.6374, 0.1553, 0.6005, 0.1505
+
+--- BandShift ---
+BandShift, USP,      svm,     0.6900, 0.1413, 0.5771, 0.1868, 0.4677, 0.1834
+BandShift, USP,      rbf_svm, 0.3167, 0.1403, 0.2450, 0.2107, 0.0755, 0.1613
+BandShift, USP,      rf,      0.7533, 0.0658, 0.4775, 0.0785, 0.4565, 0.1697
+BandShift, SNV,      svm,     0.3767, 0.2113, 0.2634, 0.1123, 0.0744, 0.1804
+BandShift, SNV,      rbf_svm, 0.2667, 0.0833, 0.1387, 0.0267, 0.0000, 0.0000
+BandShift, SNV,      rf,      0.7333, 0.1076, 0.5658, 0.1495, 0.4850, 0.1682
+BandShift, SG1,      svm,     0.3667, 0.2500, 0.2292, 0.1209, 0.0214, 0.2140
+BandShift, SG1,      rbf_svm, 0.2500, 0.0000, 0.1333, 0.0000, 0.0000, 0.0000
+BandShift, SG1,      rf,      0.7500, 0.1559, 0.5485, 0.1619, 0.5218, 0.2277
+BandShift, EMSC,     svm,     0.3500, 0.2138, 0.2700, 0.1332, 0.0480, 0.1952
+BandShift, EMSC,     rbf_svm, 0.6500, 0.0833, 0.2613, 0.0267, 0.0000, 0.0000
+BandShift, EMSC,     rf,      0.7433, 0.0718, 0.4644, 0.1496, 0.3635, 0.2269
+BandShift, Detrend,  svm,     0.4767, 0.2132, 0.2717, 0.1089, 0.0415, 0.1832
+BandShift, Detrend,  rbf_svm, 0.2500, 0.0000, 0.1333, 0.0000, 0.0000, 0.0000
+BandShift, Detrend,  rf,      0.8100, 0.1035, 0.6632, 0.1941, 0.6225, 0.1843
+
+>>> BandShift drop (LinearSVM):
+    USP:     83.00% → 69.00%  ΔOA = -14.00pp (最优)
+    SNV:     75.00% → 37.67%  ΔOA = -37.33pp
+    SG1:     72.33% → 36.67%  ΔOA = -35.67pp
+    EMSC:    76.00% → 35.00%  ΔOA = -41.00pp
+    Detrend: 75.67% → 47.67%  ΔOA = -28.00pp
+
+>>> 统计检验 (RM-ANOVA + Bonferroni, Normal 条件):
+    [LinearSVM] F(4,96)=6.4389, p=0.000124 ***
+      USP vs SG1:      Δ=+10.67%, p_corr=0.000132 ***
+      USP vs Detrend:  Δ=+7.33%,  p_corr=0.004911 ***
+      USP vs SNV:      Δ=+8.00%,  p_corr=0.014823 (n.s. at α=0.005)
+      USP vs EMSC:     Δ=+7.00%,  p_corr=0.095501 (n.s.)
+    [RBF-SVM] F(4,96)=15.5405, p<0.001 ***
+      USP vs SNV/SG1/Detrend 均 p_corr<0.01 ***
+    [RandomForest] F(4,96)=2.4565, p=0.050758 (n.s.)
+
+
+================================================================================
+表 5: Random Forest 特征重要性（附录，PC1-PC20）
+================================================================================
+源文件: results_rf_importances.csv (塑料 Turbid/Foamy)
+        results_generalization_rf_importances.csv (泛化 Pooled)
+说明: RF 在 USP/SNV/SG1/EMSC/Detrend 5 方法下的 PC1-PC20 重要性
+      用于展示 USP 下 PC1 重要性显著低于其他方法（散射信息已被 post-SNV 归一化）
+数据格式: condition, method, component, importance
+
+【注意】完整数据见 CSV 文件，此处仅列 USP vs SNV 的 PC1-PC5 对比摘要:
+
+--- Turbid: PC1 重要性对比 ---
+Turbid, USP,  PC1=0.0258  PC2=0.0601  PC3=0.1359  PC4=0.1687  PC5=0.1001
+Turbid, SNV,  PC1=0.1471  PC2=0.1147  PC3=0.1010  PC4=0.1138  PC5=0.1500
+Turbid, SG1,  PC1=0.0949  PC2=0.1772  PC3=0.1452  PC4=0.1264  PC5=0.0726
+Turbid, EMSC, PC1=0.1368  PC2=0.1461  PC3=0.1543  PC4=0.1636  PC5=0.0341
+Turbid, Detrend, PC1=0.0804  PC2=0.1528  PC3=0.1329  PC4=0.1276  PC5=0.0790
+
+--- Foamy: PC1 重要性对比 ---
+Foamy, USP,  PC1=0.0415  PC2=0.0670  PC3=0.1092  PC4=0.0633  PC5=0.1189
+Foamy, SNV,  PC1=0.1485  PC2=0.1692  PC3=0.1141  PC4=0.0574  PC5=0.1056
+Foamy, SG1,  PC1=0.0844  PC2=0.1511  PC3=0.1750  PC4=0.1110  PC5=0.1100
+Foamy, EMSC, PC1=0.1448  PC2=0.1200  PC3=0.1500  PC4=0.1907  PC5=0.0265
+Foamy, Detrend, PC1=0.0974  PC2=0.1393  PC3=0.1074  PC4=0.1192  PC5=0.1382
+
+>>> 关键观察:
+    USP 下 PC1 重要性最低 (Turbid 0.026, Foamy 0.042)
+    其他方法 PC1 重要性 0.08-0.19
+    → 证明 USP 的 post-SNV 已将 PC1（散射主成分）归一化，
+      判别力转移到 PC2-PC5（化学信息成分）
+
+
+================================================================================
+附录: 所有源 CSV 文件路径
+================================================================================
+d:\PCA\results_baselines_full.csv                     (表 1 主数据)
+d:\PCA\results_baselines_raw.csv                      (表 1 原始 25 次重复)
+d:\PCA\results_log_preprocessing.csv                  (表 2)
+d:\PCA\results_generalization_full.csv                (表 3 主数据)
+d:\PCA\results_generalization_raw.csv                 (表 3 原始)
+d:\PCA\results_textile_bandshift_full.csv             (表 4 主数据)
+d:\PCA\results_textile_bandshift_raw.csv              (表 4 原始 25 次重复)
+d:\PCA\results_rf_importances.csv                     (表 5 塑料)
+d:\PCA\results_generalization_rf_importances.csv      (表 5 泛化)
+
+================================================================================
+END
+================================================================================

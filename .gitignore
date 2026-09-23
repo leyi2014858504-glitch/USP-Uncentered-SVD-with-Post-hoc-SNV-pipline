@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (download from Zenodo, see README)
+1/*.csv
+__Mean_Spectra_Reflectance.csv
+
+# IDE / agent workspace
+.trae/
+
+# Temp / scratch
+_temp_output.txt
+_run_out.txt
+
+# But keep result summaries
+!csv_results_summary.csv
+!ood_water_results_summary.csv
+!ood_water_results_summary_multi_train.csv
+!pc_variance_summary.csv
+!textile_results_summary.csv
+
+# Output directories
+output/
+results/

@@ -1,0 +1,10 @@
+dataset,wavelength_nm,loading,type,prominence,norm_loading
+Original_Clear,1440.000000,0.061601,peak,0.051904,1.000000
+Original_Clear,1214.000000,0.018869,peak,0.034291,0.618798
+Original_Clear,1282.000000,-0.015422,trough,0.034291,0.312891
+Original_Clear,1076.000000,-0.050496,trough,0.009655,0.000000
+Generalization_Pooled,1491.000000,0.059319,peak,0.043886,1.000000
+Generalization_Pooled,1282.000000,-0.023501,trough,0.023643,0.242675
+Generalization_Pooled,1189.000000,0.000143,peak,0.023643,0.458877
+Generalization_Pooled,1070.000000,-0.050039,trough,0.021210,0.000000
+Generalization_Pooled,978.000000,-0.028829,peak,0.015805,0.193950

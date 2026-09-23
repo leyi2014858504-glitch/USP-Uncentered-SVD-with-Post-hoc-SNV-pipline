@@ -1,0 +1,43 @@
+ratio,method,PC1,PC2
+0.01,A*: Global TruncSVD (Centered),96.975296,2.4293182
+0.01,"A2*: Global TruncSVD (SNV-Pre, Centered)",71.05765,18.38349
+0.01,A2: Global TruncSVD (SNV-Pre),78.309204,14.658982
+0.01,"A3*: Global TruncSVD (MSC-Pre, Centered)",81.21944,12.357716
+0.01,A3: Global TruncSVD (MSC-Pre),95.09493,4.5312386
+0.01,A: Global TruncSVD,98.8975,0.8571622
+0.1,A*: Global TruncSVD (Centered),97.36503,1.9638127
+0.1,"A2*: Global TruncSVD (SNV-Pre, Centered)",66.63266,15.958648
+0.1,A2: Global TruncSVD (SNV-Pre),72.77022,16.425388
+0.1,"A3*: Global TruncSVD (MSC-Pre, Centered)",87.27745,7.64411
+0.1,A3: Global TruncSVD (MSC-Pre),88.08806,11.279541
+0.1,A: Global TruncSVD,98.797676,0.9222341
+0.15,A*: Global TruncSVD (Centered),97.49422,1.9053403
+0.15,"A2*: Global TruncSVD (SNV-Pre, Centered)",66.48807,15.28179
+0.15,A2: Global TruncSVD (SNV-Pre),73.31077,15.749194
+0.15,"A3*: Global TruncSVD (MSC-Pre, Centered)",91.97312,4.587317
+0.15,A3: Global TruncSVD (MSC-Pre),85.257034,13.879743
+0.15,A: Global TruncSVD,98.791115,0.9444611
+0.2,A*: Global TruncSVD (Centered),97.63535,1.869356
+0.2,"A2*: Global TruncSVD (SNV-Pre, Centered)",65.461914,15.379348
+0.2,A2: Global TruncSVD (SNV-Pre),72.241936,16.181185
+0.2,"A3*: Global TruncSVD (MSC-Pre, Centered)",90.226524,6.1156983
+0.2,A3: Global TruncSVD (MSC-Pre),86.5784,12.536046
+0.2,A: Global TruncSVD,98.67822,1.0783099
+0.3,A*: Global TruncSVD (Centered),97.72883,1.8250219
+0.3,"A2*: Global TruncSVD (SNV-Pre, Centered)",65.71663,14.287315
+0.3,A2: Global TruncSVD (SNV-Pre),71.83901,16.567965
+0.3,"A3*: Global TruncSVD (MSC-Pre, Centered)",90.44278,6.1672997
+0.3,A3: Global TruncSVD (MSC-Pre),82.985016,15.844209
+0.3,A: Global TruncSVD,98.582825,1.1759356
+0.5,A*: Global TruncSVD (Centered),97.67452,1.891032
+0.5,"A2*: Global TruncSVD (SNV-Pre, Centered)",65.34248,14.498322
+0.5,A2: Global TruncSVD (SNV-Pre),71.5641,16.43415
+0.5,"A3*: Global TruncSVD (MSC-Pre, Centered)",86.28518,8.988696
+0.5,A3: Global TruncSVD (MSC-Pre),86.21633,12.246227
+0.5,A: Global TruncSVD,98.483505,1.2678485
+1.0,A*: Global TruncSVD (Centered),97.88803,1.7299184
+1.0,"A2*: Global TruncSVD (SNV-Pre, Centered)",64.49593,14.289016
+1.0,A2: Global TruncSVD (SNV-Pre),71.11125,16.675835
+1.0,"A3*: Global TruncSVD (MSC-Pre, Centered)",83.883026,10.291797
+1.0,A3: Global TruncSVD (MSC-Pre),86.969124,10.945647
+1.0,A: Global TruncSVD,98.44713,1.3150462

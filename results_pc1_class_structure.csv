@@ -1,0 +1,10 @@
+dataset,condition,PC1_energy,frac_class_PC1,eta2_PC1,USP_adv
+Original,Clear,98.4383,97.5172,40.8410,3.8327
+Original,Turbid,98.6503,97.9640,37.3359,1.1708
+Original,Foamy,99.0679,95.7943,30.3224,6.0114
+Generalization,Bu5,97.6491,19.8567,14.2148,-10.6111
+Generalization,W6,97.1882,19.5303,17.8360,-8.6667
+Generalization,TG,98.1994,12.3873,7.4445,4.5556
+Generalization,C (clear),97.1402,27.5544,30.6006,-6.2222
+Generalization,V,95.7496,15.6917,6.9378,-4.2222
+Generalization,DIW,91.5958,77.1689,38.3688,17.0000

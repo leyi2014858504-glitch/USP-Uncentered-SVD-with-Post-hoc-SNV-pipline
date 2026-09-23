@@ -1,0 +1,23 @@
+dataset,reference_nm,actual_nm,kind,assignment,pc2_loading,pc2_norm
+Original_Clear,970,970.000000,max,H2O O-H nu1+nu3 combination,-0.041085,0.083954
+Original_Clear,1070,1070.000000,min,H2O transmission window,-0.050280,0.001931
+Original_Clear,1180,1180.000000,max,"C-H 3nu / nu+2delta (polymer, weak)",-0.000764,0.443650
+Original_Clear,1210,1210.000000,max,H2O O-H nu+delta combination,0.017920,0.610333
+Original_Clear,1290,1290.000000,min,H2O transmission window,-0.015197,0.314899
+Original_Clear,1410,1410.000000,max,"C-H combination (PVC/PET, weak)",0.054720,0.938620
+Original_Clear,1450,1450.000000,max,H2O O-H 2nu1 first overtone,0.061025,0.994862
+Original_Clear,1510,1510.000000,max,"N-H 1st overtone (amide, PA only)",0.047488,0.874097
+Original_Clear,1600,1600.000000,min,H2O transmission window,0.028089,0.701042
+Original_Clear,1660,1660.000000,max,aromatic C-H 1st overtone (PET),0.020410,0.632540
+Original_Clear,1680,1680.000000,max,C-H 1st overtone onset (PE/PP/PET),0.010978,0.548403
+Generalization_Pooled,970,970.000000,max,H2O O-H nu1+nu3 combination,-0.029403,0.188697
+Generalization_Pooled,1070,1070.000000,min,H2O transmission window,-0.050039,0.000000
+Generalization_Pooled,1180,1180.000000,max,"C-H 3nu / nu+2delta (polymer, weak)",-0.000149,0.456211
+Generalization_Pooled,1210,1210.000000,max,H2O O-H nu+delta combination,-0.001926,0.439962
+Generalization_Pooled,1290,1290.000000,min,H2O transmission window,-0.022828,0.248824
+Generalization_Pooled,1410,1410.000000,max,"C-H combination (PVC/PET, weak)",0.034932,0.776998
+Generalization_Pooled,1450,1450.000000,max,H2O O-H 2nu1 first overtone,0.055995,0.969606
+Generalization_Pooled,1510,1510.000000,max,"N-H 1st overtone (amide, PA only)",0.056831,0.977253
+Generalization_Pooled,1600,1600.000000,min,H2O transmission window,0.040658,0.829357
+Generalization_Pooled,1660,1660.000000,max,aromatic C-H 1st overtone (PET),0.021297,0.652323
+Generalization_Pooled,1680,1680.000000,max,C-H 1st overtone onset (PE/PP/PET),0.015433,0.598692
